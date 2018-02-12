@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import logo from './PersonalLogo.png';
-import './App.css';
+import logo from '../PersonalLogo.png';
+import '../styling/App.css';
 
-class App extends Component {
+import Education from './Education.js'
+import Experience from './Experience.js'
+import Projects from './Projects.js'
+import Skills from './Skills.js'
+
+export default class App extends Component {
   render() {
     return (
       <div className="App">
@@ -14,10 +19,12 @@ class App extends Component {
           <p className="App-intro">
             Look how cool I am...
           </p>
+          <Education />
+          <Experience />
+          <Projects />
+          <Skills />
         </main>
       </div>
     );
   }
 }
-
-export default App;
