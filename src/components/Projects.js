@@ -12,7 +12,7 @@ export default class Projects extends Component {
           Superior Learning Academy - Capstone
         </h4>
           <a href='https://github.com/landonwshields/sla'>
-            Github
+            Github Repo
           </a>
           <p>
             The easiest to update website available, even my mom can use it!
@@ -23,7 +23,7 @@ export default class Projects extends Component {
           Roofstops
         </h4>
           <a href='https://github.com/landonwshields/Roofstops'>
-            Github
+            Github Repo
           </a>
           <p>
             Roofstops is a new app to find rooftop bars and patios nearest you!
@@ -34,7 +34,7 @@ export default class Projects extends Component {
           CLIQUE
         </h4>
           <a href='https://github.com/landonwshields/CLIQUE'>
-            Github
+            Github Repo
           </a>
           <p>
             A group sourced networking platform.
@@ -45,7 +45,7 @@ export default class Projects extends Component {
           Drug Dominate
         </h4>
           <a href='https://github.com/shieldsl/Q1-project-DrugDominate'>
-            Github
+            Github Repo
           </a>
           <p>
             An app that allows input of any two medications and it will inform the user of any interactions they may have.
