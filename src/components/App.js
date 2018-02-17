@@ -6,6 +6,7 @@ import Education from './Education.js'
 import Experience from './Experience.js'
 import Projects from './Projects.js'
 import Skills from './Skills.js'
+import Navbar from './Navbar.js'
 
 export default class App extends Component {
   render() {
@@ -16,9 +17,6 @@ export default class App extends Component {
           <h1 className="App-title">Landon W Shields</h1>
         </header>
         <main className="main-content">
-          <p className="App-intro">
-            Look how cool I am...
-          </p>
           <Education />
           <Experience />
           <Projects />
