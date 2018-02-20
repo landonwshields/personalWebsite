@@ -22,7 +22,6 @@ export default class App extends Component {
   }
 
   goToHome = (e) => {
-    console.log('success')
     this.setState({
       homePage: true,
       educationDisplay: false,
@@ -33,7 +32,6 @@ export default class App extends Component {
     e.preventDefault();
   }
   goToEducation = (e) => {
-    console.log('success')
     this.setState({
       homePage: false,
       educationDisplay: true,
@@ -44,7 +42,6 @@ export default class App extends Component {
     e.preventDefault();
   }
   goToExperience = (e) => {
-    console.log('success')
     this.setState({
       homePage: false,
       educationDisplay: false,
@@ -55,7 +52,6 @@ export default class App extends Component {
     e.preventDefault();
   }
   goToProjects = (e) => {
-    console.log('success')
     this.setState({
       homePage: false,
       educationDisplay: false,
@@ -66,12 +62,11 @@ export default class App extends Component {
     e.preventDefault();
   }
   goToSkills = (e) => {
-    console.log('success')
     this.setState({
       homePage: false,
-      educationData: false,
-      experienceData: false,
-      projectsData: false,
+      educationDisplay: false,
+      experienceDisplay: false,
+      projectsDisplay: false,
       skillsDisplay: true
     })
     e.preventDefault();
@@ -80,10 +75,6 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Landon W Shields</h1>
-        </header>
         <Navbar
           goToHome={this.goToHome.bind(this)}
           goToEducation={this.goToEducation.bind(this)}
@@ -91,6 +82,10 @@ export default class App extends Component {
           goToProjects={this.goToProjects.bind(this)}
           goToSkills={this.goToSkills.bind(this)}
         />
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Landon W Shields</h1>
+        </header>
         <main className="main-content">
           {
             this.state.homePage ? <Home /> : null
