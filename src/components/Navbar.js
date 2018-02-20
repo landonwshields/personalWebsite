@@ -11,13 +11,13 @@ export default class Navbar extends Component {
         <a href='Education' onClick={this.props.goToEducation}>
           Education
         </a>
-        <a href='Experience'>
+        <a href='Experience' onClick={this.props.goToExperience}>
           Experience
         </a>
-        <a href='Projects'>
+        <a href='Projects' onClick={this.props.goToProjects}>
           Projects
         </a>
-        <a href='Skills'>
+        <a href='Skills' onClick={this.props.goToSkills}>
           Skills
         </a>
       </div>

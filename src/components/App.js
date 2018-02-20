@@ -14,10 +14,10 @@ export default class App extends Component {
     super();
     this.state = {
       homePage: true,
-      educationData: false,
-      experienceData: false,
-      projectsData: false,
-      skillsData: false
+      educationDisplay: false,
+      experienceDisplay: false,
+      projectsDisplay: false,
+      skillsDisplay: false
     }
   }
 
@@ -25,10 +25,10 @@ export default class App extends Component {
     console.log('success')
     this.setState({
       homePage: true,
-      educationData: false,
-      experienceData: false,
-      projectsData: false,
-      skillsData: false
+      educationDisplay: false,
+      experienceDisplay: false,
+      projectsDisplay: false,
+      skillsDisplay: false
     })
     e.preventDefault();
   }
@@ -36,46 +36,46 @@ export default class App extends Component {
     console.log('success')
     this.setState({
       homePage: false,
-      educationData: true,
-      experienceData: false,
-      projectsData: false,
-      skillsData: false
+      educationDisplay: true,
+      experienceDisplay: false,
+      projectsDisplay: false,
+      skillsDisplay: false
     })
     e.preventDefault();
   }
-  // goToHome = (e) => {
-  //   console.log('success')
-  //   this.setState({
-  //     homePage: true,
-  //     educationData: false,
-  //     experienceData: false,
-  //     projectsData: false,
-  //     skillsData: false
-  //   })
-  //   e.preventDefault();
-  // }
-  // goToHome = (e) => {
-  //   console.log('success')
-  //   this.setState({
-  //     homePage: true,
-  //     educationData: false,
-  //     experienceData: false,
-  //     projectsData: false,
-  //     skillsData: false
-  //   })
-  //   e.preventDefault();
-  // }
-  // goToHome = (e) => {
-  //   console.log('success')
-  //   this.setState({
-  //     homePage: true,
-  //     educationData: false,
-  //     experienceData: false,
-  //     projectsData: false,
-  //     skillsData: false
-  //   })
-  //   e.preventDefault();
-  // }
+  goToExperience = (e) => {
+    console.log('success')
+    this.setState({
+      homePage: false,
+      educationDisplay: false,
+      experienceDisplay: true,
+      projectsDisplay: false,
+      skillsDisplay: false
+    })
+    e.preventDefault();
+  }
+  goToProjects = (e) => {
+    console.log('success')
+    this.setState({
+      homePage: false,
+      educationDisplay: false,
+      experienceDisplay: false,
+      projectsDisplay: true,
+      skillsDisplay: false
+    })
+    e.preventDefault();
+  }
+  goToSkills = (e) => {
+    console.log('success')
+    this.setState({
+      homePage: false,
+      educationData: false,
+      experienceData: false,
+      projectsData: false,
+      skillsDisplay: true
+    })
+    e.preventDefault();
+  }
 
   render() {
     return (
@@ -87,13 +87,25 @@ export default class App extends Component {
         <Navbar
           goToHome={this.goToHome.bind(this)}
           goToEducation={this.goToEducation.bind(this)}
+          goToExperience={this.goToExperience.bind(this)}
+          goToProjects={this.goToProjects.bind(this)}
+          goToSkills={this.goToSkills.bind(this)}
         />
         <main className="main-content">
           {
             this.state.homePage ? <Home /> : null
           }
           {
-            this.state.educationData ? <Education /> : null
+            this.state.educationDisplay ? <Education /> : null
+          }
+          {
+            this.state.experienceDisplay ? <Experience /> : null
+          }
+          {
+            this.state.projectsDisplay ? <Projects /> : null
+          }
+          {
+            this.state.skillsDisplay ? <Skills /> : null
           }
         </main>
       </div>
