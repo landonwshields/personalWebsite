@@ -1,0 +1,15 @@
+.home{
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.aTag{
+  color: black;
+  text-decoration: none;
+}
+
+.aTag:hover{
+  color: red;
+}
